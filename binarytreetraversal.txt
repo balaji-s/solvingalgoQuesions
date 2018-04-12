@@ -1,0 +1,35 @@
+1) PREORDER: ROOT, LEFT, RIGHT.
+You need to think of this as a recursive process:  
+Grab the Root. (G)  
+Then Check the Left. (It's a tree)  
+Grab the Root of the Left. (D)  
+Then Check the Left of D. (It's a tree)  
+Grab the Root of the Left (B)  
+Then Check the Left of B. (A)  
+Check the Right of B. (C, and it's a leaf node. Finish B tree. Continue D tree)  
+Check the Right of D. (It's a tree)  
+Grab the Root. (E)  
+Check the Left of E. (Nothing)  
+Check the Right of E. (F, Finish D Tree. Move back to G Tree)  
+Check the Right of G. (It's a tree)  
+Grab the Root of I Tree. (I)  
+Check the Left. (H, it's a leaf.)  
+Check the Right. (K, it's a leaf. Finish G tree)  
+DONE: G, D, B, A, C, E, F, I, H, K  
+
+2) INORDER: LEFT, ROOT, RIGHT
+Where the root is "in" or between the left and right child node.  
+Check the Left of the G Tree. (It's a D Tree)  
+Check the Left of the D Tree. (It's a B Tree)  
+Check the Left of the B Tree. (A)  
+Check the Root of the B Tree (B)  
+Check the Right of the B Tree (C, finished B Tree!)  
+Check the Right of the D Tree (It's a E Tree)  
+Check the Left of the E Tree. (Nothing)  
+Check the Right of the E Tree. (F, it's a leaf. Finish E Tree. Finish D Tree)...  
+Onwards until...   
+DONE: A, B, C, D, E, F, G, H, I, K  
+
+3) POSTORDER: 
+LEFT, RIGHT, ROOT  
+DONE: A, C, B, F, E, D, H, K, I, G
